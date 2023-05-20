@@ -41,7 +41,7 @@ public class SpringShopJpa1Application implements CommandLineRunner  {
 		articleRepository.save(new Article("R510", "Asus", 600, pc));
 		*/
 
-		
+		/*
 		 for (Article article : articleRepository.findByBrand("Samsung")) {
 			System.out.println("article where brand : " + article);
 		}
@@ -67,10 +67,11 @@ public class SpringShopJpa1Application implements CommandLineRunner  {
 		for (Article article : articleRepository.findByBrand("Samsung")) {
 			System.out.println("article where brand : " + article);
 		}
+		 */
 		
 		//Exemple n°2
-		for (Article article : articleRepository.findByBrand("Samsung")) {
-			System.out.println("article where brand : " + article);
+		for (Article article : articleRepository.showByAllBrand("Samsung")) {
+			System.out.println("article findAllArticleMethode : " + article);
 		}
 		
 		//Exercice 1.3 : Ajouter une méthode qui permet de renvoyer tous les articles contenants telle description et telle marque.
